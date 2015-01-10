@@ -1,0 +1,28 @@
+* {
+  .border-radius(0) !important;
+}
+
+body {background: #FF5A5F;}
+
+.fb-bg {
+  background:#49649F;
+  color: white;
+  border-radius: 1 !important;
+  padding:20px 10px;
+
+  font-size:14px;
+}
+
+.sign-in-wrapper {
+  margin-top:20%;
+  background: #FF5A5F;
+}
+
+.sign-in-wrapper .explan-sign-sign-in {
+  color: white;
+}
+
+.sign-in-wrapper  .explan-sign-sign-in  {
+  font-size: 10px;
+  margin:10px;
+}

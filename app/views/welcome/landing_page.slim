@@ -1,0 +1,9 @@
+- if !user_signed_in? 
+  .container.text-center.sign-in-wrapper
+    = link_to 'Sign in with Facebook', signin_path, class: "btn btn-primary btn-lg fb-bg"
+
+    .explan-sign-sign-in 1 click login (we never share anything, all data is private)
+
+- else
+  .container.text-center 
+   = link_to 'Sign out', signout_path, class: "btn btn-primary btn-lg fb-bg"

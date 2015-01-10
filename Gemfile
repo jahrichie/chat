@@ -15,6 +15,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'slim-rails'
 gem 'thin'
+gem 'heroku'
 group :development do
   gem 'rails_layout'
 end

@@ -6,11 +6,8 @@ html
       = content_for?(:title) ? yield(:title) : 'Chat'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Chat'}"
     == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => true
+    link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'
     == javascript_include_tag 'application', 'data-turbolinks-track' => true
     == csrf_meta_tags
   body
-    header
-      == render 'layouts/navigation'
-    main[role="main"]
-      == render 'layouts/messages'
-      == yield
+    == yield
