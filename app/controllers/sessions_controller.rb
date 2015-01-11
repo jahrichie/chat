@@ -1,4 +1,22 @@
 class SessionsController < ApplicationController
+  
+  def location_data
+    if user_signed_in?  
+      @current_user =  User.find(session[:user_id])
+      params.delete :controller
+      params.delete :action
+      @current_user.update_attribute(:serialized_location, params.to_json)
+      render json: {
+        status: 200,
+         message: "Everything went swell."
+      }
+    else 
+      render json: {
+        status: 420,
+        message: "Unathorized"
+      }
+    end
+  end
 
   def new
     redirect_to '/auth/facebook'

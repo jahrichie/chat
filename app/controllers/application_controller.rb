@@ -7,10 +7,10 @@ class ApplicationController < ActionController::Base
   helper_method :user_signed_in?
   helper_method :correct_user?
 
-  private
+  # private
     def current_user
       begin
-        @current_user ||= User.find(session[:user_id]) if session[:user_id]
+        @current_user ||= User.find(session[:user_id])  if session[:user_id]
       rescue Exception => e
         nil
       end

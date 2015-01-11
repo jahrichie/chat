@@ -1,9 +1,31 @@
 - if !user_signed_in? 
+  / NOT SIGNED INT
   .container.text-center.sign-in-wrapper
     = link_to 'Sign in with Facebook', signin_path, class: "btn btn-primary btn-lg fb-bg"
-
-    .explan-sign-sign-in 1 click login (we never share anything, all data is private)
+    .explan-sign-sign-in 1 click login <br> we never share anything, all data is private 
 
 - else
-  .container.text-center 
-   = link_to 'Sign out', signout_path, class: "btn btn-primary btn-lg fb-bg"
+  = javascript_include_tag "init-getAndSet-location"
+  .container.text-center
+    .loader 
+      | Trying to find your location <i class="fa fa-circle-o-notch fa-spin"></i>
+    .location-verifier
+      .placeholder
+      .fake-center style="width:400px;"
+        .col-md-6 
+          .btn.yes.float-left Yes
+        .col-md-6 
+          .btn.no.float-left No
+      .enter-it-myself
+        input type="text"
+
+
+
+  a href="#menu" class="menu-link" &#9776;
+  nav#menu.panel role="navigation" 
+    ul
+      li
+        a href="/"  <i class="fa fa-location-arrow"></i> Set my location
+      li
+        = link_to "<i class='fa fa-sign-out'></i> Sign out #{@current_user} ".html_safe, signout_path 
+      

@@ -1,20 +1,22 @@
-* {
-  .border-radius(0) !important;
-}
-
 body {background: #FF5A5F;}
-
+.float-right {float:right;}
+.float-left {float:left;}
+.no-margin-top {margin-top:0 !important;}
 .fb-bg {
   background:#49649F;
   color: white;
   border-radius: 1 !important;
   padding:20px 10px;
-
   font-size:14px;
+}
+.fb-bg,
+.btn {
+  font-family: 'Didact Gothic', sans-serif !important;
+  font-weight: 400;
 }
 
 .sign-in-wrapper {
-  margin-top:20%;
+  margin-top:200px;
   background: #FF5A5F;
 }
 
@@ -25,4 +27,95 @@ body {background: #FF5A5F;}
 .sign-in-wrapper  .explan-sign-sign-in  {
   font-size: 10px;
   margin:10px;
+}
+
+/*big slide*/
+.panel {
+    position: fixed;
+    left: -15.625em; /*left or right and the width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+}
+
+
+.wrap { 
+    position: relative; 
+}
+/*big slide end*/
+
+.menu-link {
+  font-size:3em;
+  color: white;
+}
+
+#menu.panel li {
+  list-style: none;
+
+}
+
+#menu.panel li a {
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  
+}
+
+#menu,
+.panel {
+  border-radius: 0 !important;
+  background: rgba(255,255,255,.9)
+}
+
+a.menu-link { 
+  position: fixed;
+  left:5px;
+  top:5px;
+}
+
+ .loader {
+  color: white;
+  font-size:1em;
+  margin-top:200px;
+  position: relative;
+ }
+
+.loader i {
+  font-size:1em;
+  font-size:white;
+  position: absolute;
+  top:3px;
+  margin-left:20px;
+}
+
+.location-verifier input {
+  /*display: none;*/
+
+
+}
+
+.location-verifier  {
+  font-family: 'Didact Gothic', sans-serif !important;
+  font-weight: bold;
+  font-size: 18px;
+  color:white;
+  margin-top: 200px;
+  padding: 40px;
+}
+
+span.labelish {
+  font-weight: normal;
+  color: #000;
+  font-size:14px !important;
+}
+
+.location-verifier .btn.yes,
+.location-verifier .btn.no  {
+  display: inline;
+  display: none;
+}
+
+.fake-center  {margin-left:100px;}
+.enter-it-myself {display: none;}
+.placeholder.verified {
+  font-size:10px;
+  line-height: 14px;
 }
