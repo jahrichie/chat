@@ -16,3 +16,4 @@
 //= require bootstrap-sprockets
 //= require bigSlide
 //= require amplify.min
+//= require init-getAndSet-location
