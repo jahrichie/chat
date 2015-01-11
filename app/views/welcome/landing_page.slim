@@ -5,7 +5,7 @@
     .explan-sign-sign-in 1 click login <br> we never share anything, all data is private 
 
 - else
-  = javascript_include_tag "init-getAndSet-location"
+  = javascript_include_tag "init-getAndSet-location", 'data-turbolinks-track' => true
   .container.text-center
     .loader 
       | Trying to find your location <i class="fa fa-circle-o-notch fa-spin"></i>
