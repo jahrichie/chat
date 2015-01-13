@@ -1,11 +1,4 @@
-var notVerifiedPreviously = !amplify.store('different-shipping-address')
 
-if (notVerifiedPreviously){
-  alert("no local storage doing the ui thing")
-} else {
-  alert("I have your object in your local storage :-). In the future you're authed and go right to chat dash")
-  
-}
 
 globalLat = null
 globalLng = null
@@ -14,6 +7,9 @@ var options = {
   timeout: 5000,
   maximumAge: 0
 };
+
+
+
 
 // log errors
 function error(err) {
@@ -62,7 +58,7 @@ function verifiedADdress(){
   var Params = {
     humanReadable: $('.placeholder').text(),
     lat:           globalLat,
-    lng:           globalLat
+    lng:           globalLng
   }
 
   amplify.store('verified-location',Params)
@@ -110,6 +106,15 @@ $(function() {
     alert( "Handler for .click() called." );
   });
 
+
+
+  var notVerifiedPreviously = !amplify.store('verified-location')
+
+  if (notVerifiedPreviously){
+    alert("no local storage doing the ui thing")
+  } else {
+    alert("I have your object in your local storage :-). In the future you're authed and go right to chat dash. "+ amplify.store('verified-location').lat+" lng:"+amplify.store('verified-location').lng)
+  }
 
 });
 

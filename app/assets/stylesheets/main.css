@@ -119,3 +119,6 @@ span.labelish {
   font-size:10px;
   line-height: 14px;
 }
+.ui-wrapper .btn {
+  margin: 20px 0;
+}
